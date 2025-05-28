@@ -1,0 +1,250 @@
+<html>
+
+<head>
+
+    <center>
+        <title>javascript: calculate two numbers</title>
+        <link rel="stylesheet" href=<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<meta charset="windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(2gro.jpg);
+        height: 100vh;
+
+    }
+
+    h1 {
+        padding: 0px;
+        font-style: italic;
+        background-color: white;
+    }
+
+    .container {
+        border: 1px;
+        background-color: beige;
+        width: 900px;
+        margin-top: 180px;
+    }
+
+    table {
+        margin: -30px;
+        background-color: lemonchiffon;
+    }
+
+    #button {
+        margin-top: 50px;
+    }
+
+    * {
+        padding-top: 0px;
+    }
+</style>
+<div class="container">
+
+    <body>
+        <h1><u>Calculate Your Grocery price<u></h1>
+
+        <table border="1px white">
+            <form name="formcalc">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Price With Discount
+                </tr>
+
+
+
+                <tr>
+                    <td><select id="items">
+                            <option value="item">select the item</option>
+                            <option value="item">Pasta and Rice</option>
+                            <option value="item">Frozen Foods</option>
+                            <option value="item">Meat and Seafood</option>
+                            <option value="item">Bakery and Bread</option>
+                            <option value="item">Soups and Canned Goods</option>
+                            <option value="item">Dairy, Cheese, and Eggs</option>
+                            <option value="item">Oils, Sauces</option>
+                    </td>
+
+                    <td><select id="quantity">
+
+                            <option value="quantity">select the quantity</option>
+                            <option value="quantity">1 kg</option>
+                            <option value="quantity">2 kg</option>
+                            <option value="quantity">3 kg</option>
+                            <option value="quantity">4 kg</option>
+                            <option value="quantity">5 kg</option>
+                            <option value="quantity">6 kg</option>
+                            <option value="quantity">7 kg</option>
+                    </td>
+                    <td>
+                        <input type="text" name="txtnum1">
+                    </td>
+                    <td>
+                        <p>price<input type="number" id="price"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <select id="items">
+                            <option value="item">select the item</option>
+                            <option value="item">Pasta and Rice</option>
+                            <option value="item">Frozen Foods</option>
+                            <option value="item">Meat and Seafood</option>
+                            <option value="item">Bakery and Bread</option>
+                            <option value="item">Soups and Canned Goods</option>
+                            <option value="item">Dairy, Cheese, and Eggs</option>
+                            <option value="item">Oils, Sauces</option>
+                    </td>
+
+                    <td><select id="quantity">
+
+                            <option value="quantity">select the quantity</option>
+                            <option value="quantity">1 kg</option>
+                            <option value="quantity">2 kg</option>
+                            <option value="quantity">3 kg</option>
+                            <option value="quantity">4 kg</option>
+                            <option value="quantity">5 kg</option>
+                            <option value="quantity">6 kg</option>
+                            <option value="quantity">7 kg</option>
+                    </td>
+                    <td>
+                        <input type="text" name="txtnum2">
+                    </td>
+                    <td>
+                        <p>Discount<input type="number" id="discount"></p>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><select id="items">
+                            <option value="item">select the item</option>
+                            <option value="item">Pasta and Rice</option>
+                            <option value="item">Frozen Foods</option>
+                            <option value="item">Meat and Seafood</option>
+                            <option value="item">Bakery and Bread</option>
+                            <option value="item">Soups and Canned Goods</option>
+                            <option value="item">Dairy, Cheese, and Eggs</option>
+                            <option value="item">Oils, Sauces</option>
+                    </td>
+
+                    <td><select id="quantity">
+
+                            <option value="quantity">select the quantity</option>
+                            <option value="quantity">1 kg</option>
+                            <option value="quantity">2 kg</option>
+                            <option value="quantity">3 kg</option>
+                            <option value="quantity">4 kg</option>
+                            <option value="quantity">5 kg</option>
+                            <option value="quantity">6 kg</option>
+                            <option value="quantity">7 kg</option>
+                    </td>
+                    <td><input type="text" name="txtnum3"></td>
+                    <td><button type="button" id="btn">Calculate new price</button></td>
+                </tr>
+
+
+                <tr>
+                    <td><select id="items">
+                            <option value="item">select the item</option>
+                            <option value="item">Pasta and Rice</option>
+                            <option value="item">Frozen Foods</option>
+                            <option value="item">Meat and Seafood</option>
+                            <option value="item">Bakery and Bread</option>
+                            <option value="item">Soups and Canned Goods</option>
+                            <option value="item">Dairy, Cheese, and Eggs</option>
+                            <option value="item">Oils, Sauces</option>
+                    </td>
+
+                    <td><select id="quantity">
+                            <option value="quantity">select the quantity</option>
+                            <option value="quantity">1 kg</option>
+                            <option value="quantity">2 kg</option>
+                            <option value="quantity">3 kg</option>
+                            <option value="quantity">4 kg</option>
+                            <option value="quantity">5 kg</option>
+                            <option value="quantity">6 kg</option>
+                            <option value="quantity">7 kg</option>
+                    </td>
+
+                    <td><input type="text" name="txtnum4"></td>
+                    <td>
+                        <p>
+                        <h4 id="cdiscount"></h4>
+                        </p>
+                    </td>
+                </tr>
+
+
+
+
+                <br>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="calculate The Total price" onclick="sumValues()"></td>
+                    <td><input type="text" name="txtres"></td>
+                    <td>
+                        <p>
+                        <h4 id="newprice"></h4>
+                        </p>
+                    </td>
+                </tr>
+
+        </table>
+        <div id="button">
+            </center>
+        </div>
+
+        </form>
+</div>
+
+
+<p id="demo"></p>
+
+
+
+<script>
+    function sumValues() {
+        var num1, num2, num3, num4, res;
+        num1 = Number(document.formcalc.txtnum1.value);
+        num2 = Number(document.formcalc.txtnum2.value);
+        num3 = Number(document.formcalc.txtnum3.value);
+        num4 = Number(document.formcalc.txtnum4.value);
+        res = num1 + num2 + num3 + num4;
+        document.formcalc.txtres.value = res;
+    }
+
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', function () {
+        let price = document.getElementById('price').value;
+        let discount = document.getElementById('discount').value;
+
+
+
+        let cdiscount = document.getElementById('cdiscount');
+        let newprice = document.getElementById('newprice');
+
+
+
+        cdiscount.innerHTML = 'you save: ' + (price * discount / 100);
+        newprice.innerHTML = 'new price: ' + (price - (price * discount / 100));
+    });
+
+
+</script>
+</body>
+
+</html>
